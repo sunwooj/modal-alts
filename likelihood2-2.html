@@ -1,0 +1,734 @@
+<html>
+<head>
+
+<title>Language experiment</title>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://stanford.edu/~sunwooj/experiments/mmturkey.0.5.js"></script> 
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://stanford.edu/~sunwooj/experiments/sliders/jquery-ui.css"></link>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+</head>
+
+
+
+<!-- inline CSS style for now -->
+<style>
+
+body {
+    font-family: serif;
+    font-size: 120%;
+    color: black;
+    min-width: 980px;
+    background: white;  }
+
+div {
+    background: white;
+    padding: 4px 4px 4px 4px;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 4px;  
+}
+
+div div {
+    background: white;
+    padding: 4px 4px 4px 4px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /*border-radius: 5px;*/
+}
+
+label {
+    display: block;
+}
+
+.responseText{ 
+    background: white;
+    padding: 4px 4px 4px 4px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px transparent; 
+}
+
+.leftLabel {
+    float: left; 
+    font-size: 80%; 
+    font-weight: bold; 
+    color: #8C1515;
+}
+
+.rightLabel {
+    float: right; 
+    font-size: 80%; 
+    font-weight: bold; 
+    color: #8C1515;
+}
+
+.block-text {
+  width: 500px;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.questionSent {
+    margin-left: 20px;
+    margin-right: 20px;
+    /*text-indent: 20px;*/
+    text-align: left;
+}
+
+.optional {
+    text-indent: 20px;
+    text-align: left;
+}
+
+.sliders {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        margin: 5px auto;
+    }
+
+</style>
+
+
+
+
+<!-- main html body -->
+
+<body>
+
+<div class='slide' id='intro'>   
+    <div>
+
+<br>
+<img src="https://stanford.edu/~sunwooj/logo-cardinal.png" alt="Stanford Department of Linguistics" width="240">
+<br>
+<br>
+<p class='block-text'>
+NOTE: PLEASE DO NOT OPEN THE SURVEY IN A NEW TAB. THIS WILL PREVENT THE MTURK FROM SUBMITTING THE RESULTS. THERE IS NO VERIFICATION CODE AT THE END. MTURK WILL SUBMIT THE RESULTS AUTOMATICALLY.<br><br>
+This is a language related experiment. It takes approximately 5 minutes to finish. If you have any questions or concerns about this experiment, please contact one of the researchers at sunwooj@stanford.edu.
+</p>
+
+<p class='block-text'>
+LEGAL INFORMATION:
+We invite you to participate in a research study on language production and comprehension. Your experimenter will ask you to do a linguistic task such as reading sentences or words, naming pictures or describing scenes, making up sentences of your own, or participating in a simple language game.
+<br><br>
+There are no risks or benefits of any kind involved in this study. You will be paid for your participation at the posted rate.
+If you have read this form and have decided to participate in this experiment, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled. You have the right to refuse to do particular tasks. Your individual privacy will be maintained in all published and written data resulting from the study. You may print this form for your records.
+<br><br>
+CONTACT INFORMATION:
+If you have any questions, concerns or complaints about this research study, its procedures, risks and benefits, you should contact one of the Protocol Director, Penelope Eckert: (650)-725-1564.
+<br><br>
+If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-2480 or toll free at 1-866-680-2906. You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306 USA.
+If you agree to participate, please proceed to the study tasks.
+</p>
+
+<br><br>
+<button type='button' id='gotoInstructions'>Proceed to instructions</button>
+<br><br> 
+
+    </div>
+</div>
+
+
+
+
+<div class='slide' id='instructions'>
+    <div>
+
+<br><br>
+<p class='block-text'>In this experiment, you will be reading descriptions of a few situations, aided by pictures. You will then be making judgements on 6 sentences. </p>
+
+<p class='block-text'>You must be a native speaker of American English to participate in this study. To proceed, please check the boxes to confirm that you meet the requirement, and then click on the button: Start experiment. </p>
+
+<p class='block-text'> <strong> Note: This is a psychology experiment requiring undivided attention on your part. Please devote your attention solely to this task and read carefully. <span style="font-weight: bold; color: #8C1515;">We will check to make sure that everything was read. Thanks for your participation!</span></strong> </p>
+
+<!-- <span style="font-weight: bold;"> Test Sound </span>
+<br>
+<audio id="sampleAudio" controls=""><source src="#" type="audio/wav"></audio>
+<br><br> -->
+<form class='questionSent'>
+  <input type='checkbox' id='native' name='native' value='1'> I am a native speaker of American English. <br>
+<!--   <input type='checkbox' id='speaker' name='speaker' value='1'> I have a functioning headphone and an audio system that can play sound files. <br> -->
+</form>
+
+<br><br>
+<button type='button' id='startbutton'>Start experiment</button>
+<br><br>
+<p><span style='color: blue' id="checkboxWarning"></span></p>
+
+    </div>
+</div>
+
+
+
+
+<!-- Main experiment starts here -->
+<div class='slide' id='stage'>
+    <div>
+        <div>
+
+
+
+<!-- Situation and audio; no audio for now -->
+<form id='audioForm'>
+
+<p><span style="font-weight: bold; color: #8C1515;"> Situation <span class="item_number">{{}}</span> out of 6</span></p>
+
+<p class='block-text' style="font-size: 110%;"> 
+<!-- <span class='currentContext'>{{}}</span> -->
+<span class='currentName1'>{{}}</span> is a firm believer of the weather forecast and thinks that it's always accurate. <span class='currentName2'>{{}}</span> asks <span class='currentName1'>{{}}</span> what the weather will be like tomorrow. <span class='currentName1'>{{}}</span> remembers that the forecast for tomorrow was as follows:
+<!-- One day, Cam and Prue spend the whole day shut inside a windowless conference room. When it is time for them to leave, Prue wonders if it is raining outside as she didn't bring an umbrella. Cam remembers the weather forcast she saw in the morning, which was as follows: -->
+</p>
+
+<img id="currentPic" width="440"><source src="#"></img>
+<br>
+
+<p class='center-text' style="font-size: 120%; font-weight: bold;"> 
+<!--<span class='currentName'>{{}}</span>-->  <span class='currentName1'>{{}}</span> tells <span class='currentName2'>{{}}</span>: 
+</p>
+<p class='center-text' style="font-size: 120%; font-weight: bold;"> 
+&quot;<span class='currentSentence'>{{}}</span>&quot;
+</p>
+
+<!-- Audio stimuli will later be displayed here; for now, in text -->
+<!--
+<span style="font-size: 84%; color: #8C1515;">(Please click on the audio clip below.)</span>
+<audio id="currentAudio" controls=""><source src="#" type="audio/wav"></audio>
+-->
+
+</form>
+
+
+
+
+<!-- Q0: Verification (if including audio) -->
+
+<!-- <form id='responseForm0'>
+<br>
+<p class='block-text'>Q0: Please type in what you heard from the audio.</p>
+<p><input type='text' class='veriTextBox' id='verification' style="width: 400px;" value="" /></p> 
+<br>
+
+<p class='block-text'> <strong> Make sure you type in everything before you click Next, as you cannot come back to this section. </strong>
+</p>
+
+<button type='button' id='veributton'>Next</button>
+
+<p><span style='color: blue' id="veriWarning"></span></p>
+
+</form>
+-->
+
+
+
+
+
+<form id='responseForm1'>
+<br>
+<p class='block-text'>Q1: Given what <span class='currentName1'>{{}}</span> knows, is <span class='currentName1'>{{}}</span>'s statement above true or false?</p> 
+
+<div id='TrueFalse' class='responseText'> 
+
+<label><input type='radio' class='response' name='response' id='T' value='True' /> <strong>TRUE</strong></label>
+<label><input type='radio' class='response' name='response' id='F' value='False' /> <strong>FALSE</strong></label>
+
+</div> 
+
+</form>
+<br>
+
+
+
+
+<!-- Q2: Naturalness rating -->
+<form id='responseForm2'>
+
+<p class='block-text'>Q2: How naturally does <span class='currentName1'>{{}}</span>'s utterance describe the state of the world? 
+
+  <input type="hidden" class="slidervals" name="sliderval1" id="sliderval1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<p>
+<span class='leftLabel'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Not at all natural 
+</span> 
+<span class='rightLabel'> Extremely natural &nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+<br>
+<span style='float: left;'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (0) </span>  
+<span style='float: right;'> (100) &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<br>
+</p>
+
+
+<div class="sliders" id="slider1"></div>
+
+<p class='center-text' > (Drag or click the sliders to left or right.) 
+</p>
+
+</form>
+<br>
+
+
+
+
+<!-- Optional responses -->
+<p id='optional1' class='block-text'>(Optional) Any additional comments?</p>
+
+<input type='text' id="commentBox1" class="commentBox" style="width: 400px;" value="" />
+
+
+
+<!-- Warning message in case any of Q1-Q2 doesn't get a response -->
+<p><span style='color: blue' id="warning"></span></p>
+
+
+<button type='button' id='continue'>Continue</button>
+
+
+<p><span style="font-weight: bold; color: #8C1515;"> Situation <span class="item_number">{{}}</span> out of 6</span></p>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Demographic information slide -->
+<div class='slide' id='language'>
+    <div>
+
+
+<form id='languageForm'>
+
+<p class='questionSent'> 
+You are done with the actual experiment. The following is a brief questionnaire about you.
+<br><br>
+Our experience with different languages, and with different dialects of English, can influence the way we speak and the way we perceive speech. Having background information on these experiences can be helpful to researchers who study language.
+<br><br>
+Therefore, although the questionnaire below is optional, we would greatly appreciate it if you could fill it out.
+</p>
+<br><br>
+
+
+<form id='ageForm'>
+<p class='questionSent'> What is your age?
+<br>
+<input type='radio' class='res' name='age' id='20s' value='1' /> 18-29 <br>
+<input type='radio' class='res' name='age' id='30s' value='2' /> 30-39 <br>
+<input type='radio' class='res' name='age' id='40s' value='3' /> 40-49 <br>
+<input type='radio' class='res' name='age' id='50s' value='4' /> 50-59 <br>
+<input type='radio' class='res' name='age' id='60s' value='5' /> 60+ <br>
+</p>
+<br><br>
+</form>
+
+
+<form id='genderForm'>
+<p class='questionSent'> What is your gender?
+<br>
+<input type='radio' class='res' name='gend' id='Fem' value='1' /> Female <br>
+<input type='radio' class='res' name='gend' id='Mal' value='2' /> Male <br>
+<input type='radio' class='res' name='gend' id='Oth' value='3' /> Other <br>
+</p>
+<br><br>
+</form>
+
+
+<form id='ethnicityForm'>
+<p class='questionSent'> What is your ethnicity?
+<br>
+<input type='radio' class='res' name='eth' id='afa' value='1' /> African American <br>
+<input type='radio' class='res' name='eth' id='asa' value='2' /> Asian American <br>
+<input type='radio' class='res' name='eth' id='ca' value='3' /> Caucasian <br>
+<input type='radio' class='res' name='eth' id='la' value='4' /> Latina/o <br>
+<input type='radio' class='res' name='eth' id='ma' value='5' /> Mixed <br>
+<input type='radio' class='res' name='eth' id='nta' value='6' /> Native American <br>
+<input type='radio' class='res' name='eth' id='oa' value='7' /> Other <br>
+</p>
+<br><br>
+</form>
+
+
+<p class='questionSent'>Which area in the U.S. did you live for most of your life?
+<br>
+<input type='text' id='dialect' value="" />
+</p>
+
+<p class='questionSent'>Any other comments about the questions above or the general experiment?
+<br>
+<input type='text' id='lang_com' value="" />
+</p>
+
+</form>
+
+<br><br>
+
+<button type='button' id='lgsubmit'>Submit</button>
+
+    </div>
+</div>
+
+
+<div class='slide' id='finish'>
+<p>You're done with the experiment. Thanks so much for participating!</p>
+</div>
+
+</body>
+</html>
+
+
+
+<!-- Inline Javascript codes for now-->
+<script>
+
+//(if collecting data with php/server instead of MTurk)
+//var experimentName = "focusLikelihood1";
+//var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
+
+
+
+// var contextList = shuffle(["rain0", "rain8", "rain42", "rain74", "rain98", "rain100"]);
+
+// 6 between-subject conditions
+
+var stimuliList = [ 
+
+["cond1:MinAltBare", 
+    [ ["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"]], 
+    ["It will rain.", "Jasper", "Minta", ["rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10"]], 
+    ["It might rain.", "James", "Andrew", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"]], 
+    ["It will rain.", "Nancy", "Charles", ["rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50"]], 
+    ["It might rain.", "Paul", "Mrs. Ramsey", ["rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70"]], 
+    ["It will rain.", "Lily", "Mr. Tansley", ["rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90"]] ]],
+
+["cond2:MedAltBare", 
+    [ ["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"]], 
+    ["It's likely to rain.", "Jasper", "Minta", ["rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10"]], 
+    ["It will rain.", "James", "Andrew", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"]], 
+    ["It might rain.", "Nancy", "Charles", ["rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50"]], 
+    ["It's likely to rain.", "Paul", "Mrs. Ramsey", ["rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70"]], 
+    ["It will rain.", "Lily", "Mr. Tansley", ["rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90"]] ]],
+
+["cond3:RichAltBare", 
+    [["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"]], 
+    ["It will rain", "Jasper", "Minta", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"]], 
+    ["There's a 20% chance it will rain.", "James", "Andrew", ["rain20", "rain20", "rain20", "rain30", "rain30", "rain30", "rain10", "rain10", "rain10", "rain0", "rain0"]], 
+    ["There's a 70% chance it will rain.", "Nancy", "Charles", ["rain80", "rain80", "rain80", "rain60", "rain60", "rain60", "rain10", "rain10", "rain70", "rain70", "rain70"]], 
+    ["There's a 40% chance it will rain.", "Paul", "Mrs. Ramsey", ["rain30", "rain30", "rain30", "rain10", "rain10", "rain40", "rain40", "rain40", "rain50", "rain50", "rain50"]], 
+    ["There's a 90% chance it will rain.", "Lily", "Mr. Tansley", ["rain40", "rain40", "rain90", "rain90", "rain90", "rain100", "rain100", "100", "rain80", "rain80", "rain80"]]]]
+
+];
+
+//
+var basefillerList = [
+["It will be cold.", "It will be hot."], ["filler-true-1", "filler-false-3"], ["Jane", "Mr.~Banks"], ["Liz", "Mr.~Carmichael"]
+];
+//
+
+var data = {}; 
+var trialnum = 0;
+
+
+$(document).ready(function() {
+    showSlide("intro");
+    $('#gotoInstructions').click(function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        showSlide('instructions');
+    });
+
+    // document.getElementById('sampleAudio').src = "https://stanford.edu/~sunwooj/experiments/dec1/stimuli/sample.wav";
+    
+    $('#startbutton').click(function() {
+        var nat = document.getElementById("native").checked;
+        // var spe = document.getElementById("speaker").checked;
+        if (nat == true) {
+        stepExperiment();
+        }
+        else {
+            checkboxwarning = "Please check both boxes to confirm that you meet the necessary requirements, in order to proceed to the experiment.";
+            $("#checkboxWarning").html(checkboxwarning);
+        }
+    });
+});
+
+function showSlide (slideName) {
+    $('.slide').hide();
+    $('#' + slideName).show();
+}
+
+
+//var stimuliVector = {};
+// var contextStim = {};
+// var sentenceStim = {};
+// var contextPic = {};
+// var name1Stim = {};
+// var name2Stim = {};
+// var pictureVector = {};
+// var contextPic = {};
+
+
+var conditionRandom = Math.floor(Math.random() * 3);
+var pictureRandom = Math.floor(Math.random() * 9);
+
+var stimuliVector = stimuliList[conditionRandom];
+var condition = stimuliVector[0];
+var contextVector = shuffle(stimuliVector[1]);
+
+var baseStimVector = shuffle(basefillerList[0]);
+var baseContVector = shuffle(basefillerList[1]);
+var baseName1Vector = shuffle(basefillerList[2]);
+var baseName2Vector = shuffle(basefillerList[3]);
+
+
+
+function stepExperiment () {
+    if (trialnum == 8) { // end the experiment. 
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        showSlide("language");
+        $('#lgsubmit').click(function() {
+            var age = $('#ageForm').serialize();
+            var gender = $('#genderForm').serialize();
+            var race = $('#ethnicityForm').serialize();
+			var region = $('#dialect').val();
+            region = region.replace (/,/g, "");
+			var region_com = $('#lang_com').val();
+            region_com = region_com.replace (/,/g, "");
+
+			//if (lang.length > 0) {
+
+            data.age = age;
+            data.gender = gender;
+            data.race = race;
+			data.region = region;
+			data.regionComments = region_com;
+
+			showSlide('finish');
+			setTimeout(function() { turk.submit(data)}, 1000); 
+                
+                //} 
+
+            } ) }
+ 
+    else {
+
+        trialnum += 1;
+        // stimuliVector = stimuliList[conditionRandom];
+        // condition = stimuliVector[0];
+        // contextVector = shuffle(stimuliVector[1]);
+
+        if (trialnum < 3) {
+            sentenceStim = baseStimVector[trialnum-1];
+            name1Stim = baseName1Vector[trialnum-1];
+            name2Stim = baseName2Vector[trialnum-1];
+            contextPic = baseContVector[trialnum-1];
+        }
+
+        else {
+            contextStim = contextVector[trialnum-1];
+            sentenceStim = contextStim[0];
+            name1Stim = contextStim[1];
+            name2Stim = contextStim[2];
+            pictureVector = contextStim[3];
+            contextPic = pictureVector[pictureRandom+2];
+        }
+               
+        $(".item_number").html(trialnum);  
+        $(".currentSentence").html(sentenceStim);
+        $(".currentName1").html(name1Stim);
+        $(".currentName2").html(name2Stim);
+
+
+        
+        // Tell HTML which image file will display
+        //document.getElementById('currentIntroPic').src = "https://stanford.edu/~sunwooj/experiments/" + introPic + ".png";
+        document.getElementById('currentPic').src = contextPic + ".png";
+
+        var TrueFalse = $("#TrueFalse");
+        TrueFalse.html(
+            TrueFalse.find("label").sort(function(){
+                return Math.round(Math.random())-0.5;}));
+
+
+
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        showSlide('stage'); 
+        // If we only want to show the verification question at first
+        // $("#responseForm1").hide();
+        // $("#responseForm2").hide();
+        // $("#audioForm").hide();
+        // $("#optional1").hide();
+        // $(".commentBox").hide();
+        // $("#continue").hide();
+        // $("#responseForm0").hide();
+        // $("#transition").show();
+        //$("#veributton").show();
+
+        // initialize the warning messages and comment boxes again 
+        // in case it was called previously
+        //$("#verification").html("");
+
+
+        // $('#veributton').click(function() {
+        //     var veri = $('#verification').val();
+        //     veri = veri.replace (/,/g, "");
+        //     if (veri.length > 0) {
+        //         //$("#verification").html("");
+        //         $("#veriWarning").html("");
+        //         $("#responseForm0").hide();
+        //         $("#responseForm1").show();
+        //         $("#responseForm2").show();
+        //         $("#optional1").show();
+        //         $(".commentBox").show();
+        //         $("#continue").show();
+        //         $("#veributton2").hide();
+        //     }
+        //     else {
+        //         veriwarning = "Please type in what you heard to move on to the next questions.";
+        //         $("#veriWarning").html(veriwarning);
+        //     }
+        // });
+        
+
+        //When continue is clicked to move on to the next sound/stage:
+        $('#continue').click(function() {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+           
+            // var veriResponse = $('#verification').val();
+            // veriResponse = veriResponse.replace (/,/g, "");
+
+            var choiceResponse = $('#responseForm1').serialize();
+            var sliderResponse1 = $('#sliderval1').val();
+
+            var commentResponse1 = $('#commentBox1').val();
+            commentResponse1 = commentResponse1.replace (/,/g, "");
+            //var sentenceStim2 = sentenceStim.replace (/,/g, "");
+
+
+            // Check for valid answers; all questions from Q1-Q5 must be answered
+            if  (slider1.style.backgroundColor != "" && choiceResponse.length > 0) {
+
+                // make continue button available for re-use
+                $("#continue").unbind('click');
+                // ensure that response options are unticked for the next problems  
+                $(".response").prop('checked', false);
+                // ensure that the comment box is emptied as well
+                $(".commentBox").val("");
+                // erase warnings 
+                $("#warning").html("");
+                // erase veri response
+                //$("#verification").val("");
+              
+                // Write data from collected responses
+                trial = {};
+                trial.condition = condition;
+                trial.context = contextPic;
+                trial.name1 = name1Stim;
+                trial.name2 = name2Stim;
+                trial.sentence = sentenceStim;
+                trial.truefalse = choiceResponse;
+                trial.naturalness = sliderResponse1;
+                trial.comment = commentResponse1;
+                data["trial" + trialnum] = trial;
+
+
+                // Initialize the sliders again
+                refreshSlider();
+            
+
+                // Move on to the next sound
+                stepExperiment();
+     
+                    }
+            else { // If any of the questions is not answered:
+                warning = "Please answer all the questions to continue :) Make sure that you have dragged or clicked on the slider button so that the slider is colored and the button displays numeric values.";
+                $("#warning").html(warning);
+            }
+        });
+    }
+}
+
+
+// Codes for sliders
+// Slider1
+$( function() {
+    $( "#slider1" ).slider({
+      value: 50,
+      min: 0,
+      max: 100,
+      step: 1,
+      slide: function( event, ui ) {
+
+        $("#slider1").css({"background": "#CCFFFF"});
+        $("#slider1 .ui-slider-handle").css({
+                      "background": "#E0F5FF",
+                      "border-color": "#001F29"
+                  });
+
+        m_val = ui.value;
+        if (m_val < 0) {
+            $(ui.handle).text("?");
+        }
+        else {
+            $(ui.handle).text(m_val);
+        }
+        $( "#sliderval1" ).val( ui.value );
+      }
+    });
+    $( "#sliderval1" ).val( $( "#slider1" ).slider( "value" ) );
+  } );
+
+
+// Function that refreshes slider values
+function refreshSlider () {
+    $(".sliders").slider('value', 50);
+    $(".sliders").val(50);
+    $(".slidervals").val(50);
+    $(".ui-slider-handle").text("");
+    $(".sliders").css({"background":""});
+    $(".sliders" + " .ui-slider-handle").css({
+        "background":"#FAFAFA",
+        "border-color": "#CCCCCC" });
+}
+
+
+function chooseRandom(list) {
+    return list[Math.floor(Math.random() * list.length)];
+}
+
+
+function shuffle(v) { // non-destructive.
+    newarray = v.slice(0);
+    for (var j, x, i = newarray.length; i; j = parseInt(Math.random() * i), x = newarray[--i], newarray[i] = newarray[j], newarray[j] = x);
+    return newarray;
+}
+
+</script>
