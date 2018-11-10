@@ -9,48 +9,50 @@
 var stimuliList = [ 
 
 ["cond1:MinAltBare", 
-    [ ["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"]], 
-    ["It will rain.", "Jasper", "Minta", ["rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10"]], 
-    ["It might rain.", "James", "Andrew", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"]], 
-    ["It will rain.", "Nancy", "Charles", ["rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50"]], 
-    ["It might rain.", "Paul", "Mrs. Ramsey", ["rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70"]], 
-    ["It will rain.", "Lily", "Mr. Tansley", ["rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90"]],
-    ["It's going to be cold.", "Meg", "Laurie", ["filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1"]],
-    ["It's going to be hot.", "Jim", "Beth", ["filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2"]]
+    [ ["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"], "might"], 
+    ["It will rain.", "Jasper", "Minta", ["rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10"], "will"], 
+    ["It might rain.", "James", "Andrew", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"], "might"], 
+    ["It will rain.", "Nancy", "Charles", ["rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50"], "will"], 
+    ["It might rain.", "Paul", "Mrs. Ramsey", ["rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70"], "might"], 
+    ["It will rain.", "Lily", "Mr. Tansley", ["rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90"], "will"],
+    ["It's going to be cold.", "Meg", "Laurie", ["filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1"], "filler3"],
+    ["It's going to be hot.", "Jim", "Beth", ["filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2"], "filler4"]
      ]],
 
 ["cond2:MedAltBare", 
-    [ ["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"]], 
-    ["It's likely to rain.", "Jasper", "Minta", ["rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10"]], 
-    ["It will rain.", "James", "Andrew", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"]], 
-    ["It might rain.", "Nancy", "Charles", ["rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50"]], 
-    ["It's likely to rain.", "Paul", "Mrs. Ramsey", ["rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70"]], 
-    ["It will rain.", "Lily", "Mr. Tansley", ["rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90"]],
-    ["It's going to be cold.", "Meg", "Laurie", ["filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1"]],
-    ["It's going to be hot.", "Jim", "Beth", ["filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2"]]
+    [ ["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"], "might"], 
+    ["It's likely to rain.", "Jasper", "Minta", ["rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10"], "likely"], 
+    ["It will rain.", "James", "Andrew", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"], "will"], 
+    ["It might rain.", "Nancy", "Charles", ["rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50"], "might"], 
+    ["It's likely to rain.", "Paul", "Mrs. Ramsey", ["rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70"], "likely"], 
+    ["It will rain.", "Lily", "Mr. Tansley", ["rain100", "rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90"], "will"],
+    ["It's going to be cold.", "Meg", "Laurie", ["filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1"], "filler3"],
+    ["It's going to be hot.", "Jim", "Beth", ["filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2"], "filler4"]
      ]],
 
 ["cond3:RichAltBare", 
-    [["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"]], 
-    ["It will rain.", "Jasper", "Minta", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"]], 
-    ["There's a 20% chance it will rain.", "James", "Andrew", ["rain20", "rain20", "rain20", "rain30", "rain30", "rain30", "rain10", "rain10", "rain10", "rain0", "rain0"]], 
-    ["There's a 70% chance it will rain.", "Nancy", "Charles", ["rain80", "rain80", "rain80", "rain60", "rain60", "rain60", "rain10", "rain10", "rain70", "rain70", "rain70"]], 
-    ["There's a 40% chance it will rain.", "Paul", "Mrs. Ramsey", ["rain30", "rain30", "rain30", "rain10", "rain10", "rain40", "rain40", "rain40", "rain50", "rain50", "rain50"]], 
-    ["There's a 90% chance it will rain.", "Lily", "Mr. Tansley", ["rain40", "rain40", "rain90", "rain90", "rain90", "rain100", "rain100", "100", "rain80", "rain80", "rain80"]],
-    ["It's going to be cold.", "Meg", "Laurie", ["filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1"]],
-    ["It's going to be hot.", "Jim", "Beth", ["filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2"]]
+    [["It might rain.", "Cam", "Prue", ["rain0", "rain10", "rain20", "rain30", "rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100"], "might"], 
+    ["It will rain.", "Jasper", "Minta", ["rain40", "rain50", "rain60", "rain70", "rain80", "rain90", "rain100", "rain0", "rain10", "rain20", "rain30"], "will"], 
+    ["There's a 20% chance it will rain.", "James", "Andrew", ["rain20", "rain20", "rain20", "rain30", "rain30", "rain30", "rain10", "rain10", "rain10", "rain0", "rain0"], "perc20"], 
+    ["There's a 70% chance it will rain.", "Nancy", "Charles", ["rain80", "rain80", "rain80", "rain60", "rain60", "rain60", "rain10", "rain10", "rain70", "rain70", "rain70"], "perc70"], 
+    ["There's a 40% chance it will rain.", "Paul", "Mrs. Ramsey", ["rain30", "rain30", "rain30", "rain10", "rain10", "rain40", "rain40", "rain40", "rain50", "rain50", "rain50"], "perc40"], 
+    ["There's a 90% chance it will rain.", "Lily", "Mr. Tansley", ["rain40", "rain40", "rain90", "rain90", "rain90", "rain100", "rain100", "100", "rain80", "rain80", "rain80"], "perc90"],
+    ["It's going to be cold.", "Meg", "Laurie", ["filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1", "filler-cold1"], "filler3"],
+    ["It's going to be hot.", "Jim", "Beth", ["filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2", "filler-cold2"], "filler4"]
     ]]
 ];
 
 // Fillers that set baselines in the first two trials
 var basefillerList = [
-["It's going to be hot.", "It's going to be cold."], ["filler-hot2", "filler-hot1"], ["Jane", "Mr. Banks"], ["Liz", "Mr. Carmichael"]
+["It's going to be hot.", "It's going to be cold."], ["filler-hot2", "filler-hot1"], ["Jane", "Mr. Banks"], ["Liz", "Mr. Carmichael"], ["filler1", "filler2"]
 ];
 
 
 
 var data = {}; 
 var trialnum = 0;
+var percount = 0;
+var likecount = 0;
 
 
 $(document).ready(function() {
@@ -92,6 +94,7 @@ var baseStimVector = basefillerList[0];
 var baseContVector = basefillerList[1];
 var baseName1Vector = shuffle(basefillerList[2]);
 var baseName2Vector = shuffle(basefillerList[3]);
+var baseTypeVector = basefillerList[4];
 
 
 
@@ -135,6 +138,7 @@ function stepExperiment () {
             name1Stim = baseName1Vector[trialnum-1];
             name2Stim = baseName2Vector[trialnum-1];
             contextPic = baseContVector[trialnum-1];
+            countStim = baseTypeVector[trialnum-1];
         }
 
         else {
@@ -144,7 +148,23 @@ function stepExperiment () {
             name2Stim = contextStim[2];
             pictureVector = contextStim[3];
             contextPic = pictureVector[pictureRandom+2];
+            countStim = contextStim[4];
+
+            //Count graded expressions
+                if (countStim == "might" || countStim == "will") {
+                    percount = percount;
+                    likecount = likecount;}
+
+                else if (countStim == "likely") {
+                    percount = percount;
+                    likecount += 1;}
+
+                else {
+                    percount += 1;
+                    likecount = likecount;}
         }
+
+        
                
         $(".item_number").html(trialnum);  
         $(".currentSentence").html(sentenceStim);
@@ -210,9 +230,13 @@ function stepExperiment () {
                     trial.name1 = name1Stim;
                     trial.name2 = name2Stim;
                     trial.sentence = sentenceStim;
+                    trial.stype = countStim;
                     trial.truefalse = choiceResponse;
                     trial.naturalness = sliderResponse1;
                     trial.comment = commentResponse1;
+                    trial.percount = percount;
+                    trial.likecount = likecount;
+
                     data["trial" + trialnum] = trial;
                 // }
 
