@@ -151,7 +151,7 @@ function stepExperiment () {
             countStim = contextStim[4];
 
             //Count graded expressions
-                if (countStim == "might" || countStim == "will") {
+                if (countStim == "might" || countStim == "will" || countStim == "filler3" || countStim == "filler4") {
                     percount = percount;
                     likecount = likecount;}
 
